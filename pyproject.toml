@@ -1,0 +1,22 @@
+[project]
+name = "pathprofiler"
+version = "0.1.0"
+dependencies = [
+    "numpy",
+    "imageio",
+    "opencv-python",
+    "torch",
+    "scipy",
+    "torchvision",
+    "scikit-image",
+    "tqdm",
+    "openslide-python",
+    "imagecodecs",
+    "zarr",
+    "scikit-learn",
+    "matplotlib",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

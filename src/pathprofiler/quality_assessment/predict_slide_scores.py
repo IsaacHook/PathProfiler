@@ -22,9 +22,9 @@ def main():
     qc_filename_list = glob.glob(os.path.join(args.quality_overlays_dir, '*.npy'))
     comments= len(qc_filename_list)*['']
     dist_list_sum = np.zeros((1,7), dtype=float)
-    focus_model = pickle.load(open('quality-assessment/model_focus_score.pkl', 'rb'))
-    usblty_model = pickle.load(open('quality-assessment/model_usblty_score.pkl', 'rb'))
-    stain_model = pickle.load(open('quality-assessment/model_stain_score.pkl', 'rb'))
+    focus_model = pickle.load(open('pathprofiler/quality-assessment/model_focus_score.pkl', 'rb'))
+    usblty_model = pickle.load(open('pathprofiler/quality-assessment/model_usblty_score.pkl', 'rb'))
+    stain_model = pickle.load(open('pathprofiler/quality-assessment/model_stain_score.pkl', 'rb'))
     for i, npy_path in enumerate(qc_filename_list):
         slide_info_loaded = np.array(np.load(npy_path, allow_pickle=True))
         usblty = np.array(slide_info_loaded[()]['usblty'])

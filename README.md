@@ -12,7 +12,7 @@ For more details see (https://github.com/MaryamHaghighat/PathProfiler/tree/maste
 
 ===================================================
 ### Tissue Segmentation
-<img src="imgs/tissue_segmentation.jpg" align="center" />
+<img src="pathprofiler/imgs/tissue_segmentation.jpg" align="center" />
 
 A UNET segmentation model ([download](https://drive.google.com/file/d/1otWor5WnaJ4W9ynTOF1XS755CsxEa4qj/view?usp=sharing)) is trained on multiple tissue types including prostate and colon tissue to separate tissue from background. It can be deployed by running "**tissue_segmentation/run.py**" with the following arguments: 
 
@@ -39,7 +39,7 @@ A UNET segmentation model ([download](https://drive.google.com/file/d/1otWor5Wna
 
 ===================================================
 ### Quality assessment (parallel processing on CPU)
-<img src="imgs/pipeline.jpg" align="center" />
+<img src="pathprofiler/imgs/pipeline.jpg" align="center" />
 
 A multi-label ResNet18 model ([download](https://drive.google.com/file/d/13egPkDufR6W4aTBUAAf8uV6zQxwdBx6r/view?usp=sharing)) with 6 outputs of linear activation function is trained on image tiles from ProMPT prostate cancer cohort.  
 Annotated tiles are  256x256 in size and have been exctracted at 5X magnification. Tiles are further downsampled to 224x224 to accomodate for the model.
@@ -55,7 +55,7 @@ The model outputs are:
 
 **Notes**: ProMPT dataset has very limited areas of folded tissue and hence our dataset does not include a various forms of tissue folding in histology.
 
-<img src="imgs/overlays.png" align="center" />
+<img src="pathprofiler/imgs/overlays.png" align="center" />
 
 
 To start quality assessment tool, run:
